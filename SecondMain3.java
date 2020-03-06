@@ -1,43 +1,28 @@
-package com.example.myapp;
+package com.example.lab2_layout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 
-public class MainActivity3 extends AppCompatActivity {
+public class SecondActivity3 extends AppCompatActivity {
+    TextView t1,t2,t3;
+    String name,reg,dept;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        final EditText t1 = (EditText)findViewById(R.id.editText);
-        final EditText t2 = (EditText)findViewById(R.id.editText2);
-        final EditText t3 = (EditText)findViewById(R.id.editText3);
-
-        Button b = (Button)findViewById(R.id.button);
-
-        b.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent = new Intent(MainActivity3.this,SecondActivity.class);
-
-                String s1 = t1.getText().toString();
-                String s2 = t2.getText().toString();
-                String s3 = t3.getText().toString();
-
-                intent.putExtra("Name",s1);
-                intent.putExtra("USN",s2);
-                intent.putExtra("Branch",s3);
-
-                startActivity(intent);
-
-            }
-        });
-
+        setContentView(R.layout.activity_main2);
+        t1 = (TextView) findViewById(R.id.name);
+        t2 = (TextView) findViewById(R.id.usn);
+        t3 = (TextView) findViewById(R.id.dept);
+        Intent i = getIntent();
+        name = i.getStringExtra("n");
+        reg = i.getStringExtra("r");
+        dept = i.getStringExtra("d");
+        t1.setText(name);
+        t2.setText(reg);
+        t3.setText(dept);
     }
 }
