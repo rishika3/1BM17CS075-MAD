@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/sd"
+        android:layout_width="192dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:text="Student Details"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:textColor="#2E47D3"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif-smallcaps"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="282dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:columnCount="2"
+        android:rowCount="3">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="Name:"
+            android:textSize="20dp"
+            app:layout_column="0"
+            app:layout_row="0"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="297dp" />
+
+        <EditText
+            android:id="@+id/n"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_column="1"
+            app:layout_row="0"
+            tools:layout_editor_absoluteX="169dp"
+            tools:layout_editor_absoluteY="271dp" />
+
+        <TextView
+            android:id="@+id/usn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_marginTop="60dp"
+            android:text="USN:"
+            android:textSize="20dp"
+            app:layout_column="1"
+            app:layout_row="0"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="384dp" />
+
+        <EditText
+            android:id="@+id/u"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:hint="usn"
+            android:inputType="textPersonName"
+            android:text="usn"
+            app:layout_column="1"
+            app:layout_row="1"
+            tools:layout_editor_absoluteX="176dp"
+            tools:layout_editor_absoluteY="369dp" />
+
+        <TextView
+            android:id="@+id/dept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:text="Department:"
+            android:textSize="20dp"
+            app:layout_column="0"
+            app:layout_row="2"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="485dp" />
+
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="198dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="60dp"
+            android:dropDownWidth="wrap_content"
+            android:spinnerMode="dropdown"
+            android:textSize="20dp"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+
+    </GridLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="5"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="30dp"
+        android:text="Submit"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="141dp" />
+
+</LinearLayout>
