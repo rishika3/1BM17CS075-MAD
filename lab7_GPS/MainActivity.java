@@ -1,4 +1,4 @@
-package com.example.skn_app7;
+package com.example.lab7;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
